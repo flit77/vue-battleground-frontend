@@ -15,11 +15,14 @@
         </div>
       </div>
     </div>
-  
+    
     <div class="col-sm-12">
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center" v-if="isLoggedIn()">
         <h2>View Private Startup Battles</h2>
         <router-link class="btn btn-lg btn-success" to="/private-battles">Private Startup Battles</router-link>
+      </div>
+      <div class="jumbotron text-center" v-else>
+        <h2>Get Access to Private Startup Battles by Logging In</h2>
       </div>
     </div>
   </div>

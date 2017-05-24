@@ -18,17 +18,17 @@ import { isLoggedIn, login, logout } from '../../utils/auth'
 export default {
   name: 'app-nav',
   methods: {
-    handleLogin() {
-      login();
+    handleLogin () {
+      login()
     },
-    handleLogout() {
-      logout();
+    handleLogout () {
+      logout()
     },
-    isLoggedIn() {
-      return isLoggedIn();
-    },
-  },
-};
+    isLoggedIn () {
+      return isLoggedIn()
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
