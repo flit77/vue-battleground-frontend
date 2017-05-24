@@ -26,34 +26,34 @@
 </template>
 
 <script>
-import AppNav from './AppNav';
-import { isLoggedIn } from '../../utils/auth';
-import { getPublicStartupBattles } from '../../utils/battles-api';
+import AppNav from './AppNav'
+import { isLoggedIn } from '../../utils/auth'
+import { getPublicStartupBattles } from '../../utils/battles-api'
 
 export default {
   name: 'publicBattles',
   components: {
-    AppNav,
+    AppNav
   },
-  data() {
+  data () {
     return {
-      publicBattles: '',
-    };
+      publicBattles: ''
+    }
   },
   methods: {
-    isLoggedIn() {
-      return isLoggedIn();
+    isLoggedIn () {
+      return isLoggedIn()
     },
-    getPublicStartupBattles() {
+    getPublicStartupBattles () {
       getPublicStartupBattles().then((battles) => {
-        this.publicBattles = battles;
-      });
-    },
+        this.publicBattles = battles
+      })
+    }
   },
-  mounted() {
-    this.getPublicStartupBattles();
-  },
-};
+  mounted () {
+    this.getPublicStartupBattles()
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
