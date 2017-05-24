@@ -5,8 +5,8 @@
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li>
-        <button class="btn btn-danger log" @click="handleLogout()">Log out </button>
-        <button class="btn btn-info log" @click="handleLogin()">Log In</button>
+        <button class="btn btn-danger log" v-show="isLoggedIn()" @click="handleLogout()">Log out </button>
+        <button class="btn btn-info log" v-show="!isLoggedIn()" @click="handleLogin()">Log In</button>
       </li>
     </ul>
   </nav>
@@ -18,17 +18,17 @@ import { isLoggedIn, login, logout } from '../../utils/auth'
 export default {
   name: 'app-nav',
   methods: {
-    handleLogin () {
-      login()
+    handleLogin() {
+      login();
     },
-    handleLogout () {
-      logout()
+    handleLogout() {
+      logout();
     },
-    isLoggedIn () {
-      return isLoggedIn()
-    }
-  }
-}
+    isLoggedIn() {
+      return isLoggedIn();
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
