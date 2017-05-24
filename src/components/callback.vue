@@ -6,11 +6,11 @@ import { setIdToken, setAccessToken } from '../../utils/auth'
 
 export default {
   name: '',
-  mounted() {
+  mounted () {
     this.$nextTick(() => {
-      setAccessToken();
-      setIdToken();
-      window.location.href = '/';
+      setAccessToken()
+      setIdToken()
+      window.location.href = '/'
     })
   }
 }
