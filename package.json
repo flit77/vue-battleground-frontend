@@ -16,7 +16,6 @@
   "dependencies": {
     "auth0-js": ">=9.3.0",
     "auth0-lock": "^10.16.0",
-    "axios": "^0.16.1",
     "jwt-decode": "^2.2.0",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1"
